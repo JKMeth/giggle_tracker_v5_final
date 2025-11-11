@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: giggle-tracker
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python giggle_tracker_v5_final.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8563562493:AAGiuzs7N_w63tLAEV6T_wXsDIcQ-cprI8Y
+      - key: TELEGRAM_CHAT_ID
+        value: 1063182207
